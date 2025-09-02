@@ -74,6 +74,9 @@ const main = async () => {
     }
     fs.writeFileSync('dist/index.html', html);
     console.log("index.html generated");
+
+    // アイコンコピー
+    fs.copyFileSync('./icon.png', './dist/icon.png');
 }
 
 
