@@ -44,8 +44,8 @@ const main = async () => {
     // HTMLを生成
     const indexPage = fs.readFileSync('./index.ejs', 'utf8');
     const html = ejs.render(indexPage, {
-        osaka: osakaWeather["title"],
-        tokyo: tokyoWeather["title"]
+        osaka: osakaWeather,
+        tokyo: tokyoWeather
     });
     fs.writeFileSync('./index.html', html);
     console.log("index.html generated!");
