@@ -77,6 +77,8 @@ const main = async () => {
 
     // アイコンコピー
     fs.copyFileSync('./icon.png', './dist/icon.png');
+    // スタイルシートコピー
+    fs.copyFileSync('./style.css', './dist/style.css');
 }
 
 
