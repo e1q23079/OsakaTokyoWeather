@@ -1,6 +1,5 @@
 const fs = require('fs');
 const ejs = require('ejs');
-const { time } = require('console');
 
 // リクエストオプション
 const requestOptions = {
@@ -26,7 +25,7 @@ const getData = async (city) => {
 
 // メイン関数
 const main = async () => {
-    console.log("Running... Osaka and Tokyo Weather!");
+    console.log("Running... Osaka and Tokyo Weather");
 
     // 大阪の天気を取得
     // console.log("大阪");
@@ -69,7 +68,7 @@ const main = async () => {
         timeClass: timeClass
     });
     fs.writeFileSync('./index.html', html);
-    console.log("index.html generated!");
+    console.log("index.html generated");
 }
 
 
