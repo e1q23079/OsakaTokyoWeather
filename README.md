@@ -3,7 +3,7 @@
 
 ## 公開ページ
 
-- [OsakaTokyoWeather GitHub Pages](https://e1q23079.github.io/OsakaTokyoWeather/)
+- [OsakaTokyoWeather](https://e1q23079.github.io/OsakaTokyoWeather/)
 
 ## 概要
 
@@ -16,11 +16,7 @@ OsakaTokyoWeatherは、大阪と東京の最新天気情報を取得し、時間
 - EJSテンプレートによるHTML生成
 - GitHub Pagesでオンライン公開
 
-## オンラインでの使い方
-
-上記URLにアクセスするだけで、最新の大阪・東京の天気情報が表示されます。
-
-## ローカルでの使い方
+## 使い方
 
 1. 必要なパッケージをインストール
 
