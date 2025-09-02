@@ -23,12 +23,20 @@ const getData = async (city) => {
 // メイン関数
 const main = async () => {
     console.log("Running... Osaka and Tokyo Weather!");
+
+    // 大阪の天気を取得
     console.log("大阪");
     const osaka = await getData('270000');
-    console.log(osaka);
+    const osakaWeather = osaka["forecasts"][0]["image"];
+    console.log(osakaWeather["title"]);
+    console.log(osakaWeather["url"]);
+
+    // 東京の天気を取得
     console.log("東京");
     const tokyo = await getData('130010');
-    console.log(tokyo);
+    const tokyoWeather = tokyo["forecasts"][0]["image"];
+    console.log(tokyoWeather["title"]);
+    console.log(tokyoWeather["url"]);
 }
 
 
