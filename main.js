@@ -45,7 +45,8 @@ const main = async () => {
     const indexPage = fs.readFileSync('./index.ejs', 'utf8');
     const html = ejs.render(indexPage, {
         osaka: osakaWeather,
-        tokyo: tokyoWeather
+        tokyo: tokyoWeather,
+        timeClass: 'night'
     });
     fs.writeFileSync('./index.html', html);
     console.log("index.html generated!");
