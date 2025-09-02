@@ -55,10 +55,13 @@ jobs:
 
       # Upload artifact for deployment job
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-page-artifact@v4
         with:
           path: ./dist
     
-      # Deploy to GitHub Pages
+  build:
+    needs: make
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
