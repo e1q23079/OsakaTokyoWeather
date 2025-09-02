@@ -52,9 +52,13 @@ jobs:
       # Runs a test script
       - name: Run a script
         run: npm run start
+
+      # Upload artifact for deployment job
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ./dist
     
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-        with:
-          publish-dir: ./dist
