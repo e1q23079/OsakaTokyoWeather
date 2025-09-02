@@ -5,11 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .title {
+            grid-column: 1/3;
+            grid-row: 1;
+        }
+    </style>
 </head>
 
 <body>
-    大阪：<%= osaka %>
-        東京：<%= tokyo %>
+    <div class="container">
+
+        <div class="grid-container">
+            <div class="title">
+                <h1>大阪・東京の天気</h1>
+            </div>
+            <div class="osaka">
+                <h2>大阪</h2>
+                <p>
+                    <%= osaka %>
+                </p>
+            </div>
+            <div class="tokyo">
+                <h2>東京</h2>
+                <p>
+                    <%= tokyo %>
+                </p>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
