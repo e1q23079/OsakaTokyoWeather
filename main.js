@@ -67,7 +67,12 @@ const main = async () => {
         tokyo: tokyoWeather,
         timeClass: timeClass
     });
-    fs.writeFileSync('./index.html', html);
+
+    // HTMLを保存
+    if (!fs.existsSync('./dist')) {
+        fs.mkdirSync('./dist');
+    }
+    fs.writeFileSync('dist/index.html', html);
     console.log("index.html generated");
 }
 
