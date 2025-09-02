@@ -1,0 +1,1 @@
+console.log("Hello, Osaka and Tokyo Weather!");
