@@ -55,7 +55,7 @@ jobs:
 
       # Upload artifact for deployment job
       - name: Upload artifact
-        uses: actions/upload-page-artifact@v4
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist
     
