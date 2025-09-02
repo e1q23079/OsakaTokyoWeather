@@ -1,3 +1,6 @@
+const fs = require('fs');
+const ejs = require('ejs');
+
 // リクエストオプション
 const requestOptions = {
     method: "GET",
@@ -37,6 +40,15 @@ const main = async () => {
     const tokyoWeather = tokyo["forecasts"][0]["image"];
     console.log(tokyoWeather["title"]);
     console.log(tokyoWeather["url"]);
+
+    // HTMLを生成
+    const indexPage = fs.readFileSync('./index.ejs', 'utf8');
+    const html = ejs.render(indexPage, {
+        osaka: osakaWeather["title"],
+        tokyo: tokyoWeather["title"]
+    });
+    fs.writeFileSync('./index.html', html);
+    console.log("index.html generated!");
 }
 
 
